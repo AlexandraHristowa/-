@@ -1,0 +1,16 @@
+Module ClickButton
+    <div Class="loginBox">
+                    <script type = "text/javascript" >
+              var confirm_value = document.createElement("INPUT");
+                            confirm_value.type = "hidden";
+                            confirm_value.name = "confirm_value";
+                            If (confirm("Are you sure Want to submit all Budgeted Requirement ?")) {
+                                confirm_value.value = "Yes";
+                            } else {
+                                confirm_value.value = "No";
+                            }
+                            document.forms[0].appendChild(confirm_value);
+                        }
+        </script>
+         <asp:Button ID = "BtnSubmit" Text="Submit" runat="server" OnClientClick = "Confirm();" OnClick="BtnSubmit_Click" />
+            </div>
