@@ -1,18 +1,13 @@
-Module Module1
+Namespace ToStringConverter
+{
+    Using System;
 
-    Public class_123
-    Class InClass_class_123;
-    Const int max_count=6;
-    End Class
-    Public Class Method class_123
-        String promenlivaKatoString = promenliva.ToString();
-        Console.WriteLine(promenlivaKatoString);
-        End Class
-
-    Public Class Method For entrance(Of)
-        Class class_123 ';
-        int New class_123 = InClass_class_123;
-        End Class
-    End Class
-
-End Module
+    internal Class Converter
+    {
+        internal string BoolToString(bool value)
+        {
+            String valueAsString = value.ToString();
+            Return valueAsString;
+        }
+    }
+}
