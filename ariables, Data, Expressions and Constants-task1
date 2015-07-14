@@ -1,0 +1,57 @@
+Namespace ClassSize
+{
+    Using System;
+
+    Public Class Figure
+        {
+        Public Double width;
+        Public Double height;
+
+    Public Class Figure
+            {
+            this.width =width;
+            this.height = height;
+            }
+            Public Double width
+        {
+            Get
+            {
+            Return this.width;
+            }
+            Set
+            {
+            this.width=value;
+            }
+         }
+         Public Double height;
+        {
+                Get
+            {
+            Return this.height;
+            }
+            Set
+            {
+                this.height=value;
+            }
+      }
+        End Class
+
+        Public Static Figure GetRotatedFigure(Figure figure, Double angleOfTheFigureToBeRotaed)
+            {
+            Double NewRotatedWidth = Math.Abs(Math.Cos(angleOfTheFigureThatWillBeRotaed)) * Figure.width)+
+                Double newRotatedWidth = (Math.Abs(Math.Cos(angleOfTheFigureToBeRotaed)) * figure.width) +
+                    (Math.Abs(Math.Sin(angleOfTheFigureToBeRotaed)) * figure.height);
+
+            Double newRotaredHeigth = (Math.Abs(Math.Sin(angleOfTheFigureToBeRotaed)) * figure.width) +
+                    (Math.Abs(Math.Cos(angleOfTheFigureToBeRotaed)) * figure.height);
+
+            Figure rotatedFigure = New Figure(newRotatedWidth, newRotaredHeigth);
+
+            Return rotatedFigure;
+
+            }
+
+
+    End Class
+
+
