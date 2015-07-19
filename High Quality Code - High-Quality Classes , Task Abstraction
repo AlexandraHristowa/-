@@ -1,0 +1,62 @@
+Namespace Abstraction
+{
+
+    Class Circle :  Figure
+    {
+    internal Circle() ;
+		internal Circle(Double radius) ;
+
+		internal double Radius
+		{
+			Get { Return this.radius; }
+			Set
+			{
+				If (value == null ||
+				    value < 0)
+				{
+					Throw New Exception("The radius must be a positive integer value.");
+				}
+
+				this.radius = value;
+			}
+		}
+        internal double CalcSurface()
+		{
+			var surface = Math.PI * this.Radius * this.Radius;
+			Return surface;
+		}
+        internal double CalcPerimeter()
+		{
+			var perimeter = 2 * Math.PI * this.Radius;
+			Return perimeter;
+		}
+   }
+    internal abstract Class Figure
+	{
+		internal double height;
+		internal double radius;
+		internal double width;
+		internal Figure() { }
+		internal Figure(Double radius) { this.radius = radius; }
+
+		internal Figure(Double width, double height)
+		{
+			this.width = width;
+			this.height = height;
+		}
+	}
+    internal Class FiguresExample
+            {
+           var circle = New Circle(5);
+                Console.WriteLine("I am a circle. " +
+                "My perimeter is {0:f2}. My surface is {1:f2}.",
+                circle.CalcPerimeter(), circle.CalcSurface());
+            var rect = New Rectangle(2, 3);
+            Console.WriteLine("I am a rectangle. " +
+                "My perimeter is {0:f2}. My surface is {1:f2}.",
+                rect.CalcPerimeter(), rect.CalcSurface());
+            }
+
+     }
+}
+
