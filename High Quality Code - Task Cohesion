@@ -1,0 +1,57 @@
+Using system;
+Namespace Cohesion
+
+ Internal Class Utils
+        {
+        internal Static Double Width { Get; Set; }
+        internal Static Double Height { Get; Set; }
+        interenl Static Double Depth { Get; Set; }
+        }
+        
+        interanl Static Double CalcVolume()
+        {
+            Double volume = Width * Height * Depth;
+            Return volume;
+        }
+          interanl Static Double CalcDiagonalXYZ()
+        {
+            Double distance = CalcDistance3D(0, 0, 0, Width, Height, Depth);
+            Return distance;
+        }
+            }
+
+        Public Static Double CalcDiagonalXY()
+        {
+            Double distance = CalcDistance2D(0, 0, Width, Height);
+            Return distance;
+        }
+
+        Public Static Double CalcDiagonalXZ()
+        {
+            Double distance = CalcDistance2D(0, 0, Width, Depth);
+            Return distance;
+        }
+
+        Public Static Double CalcDiagonalYZ()
+        {
+            Double distance = CalcDistance2D(0, 0, Height, Depth);
+            Return distance;
+        }
+    }
+    internal Class CalcDistance
+	{
+		internal Static Double CalcDistance2D(Double x1, Double y1, Double x2, Double y2)
+		{
+			var distance = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+			Return distance;
+		}
+
+		internal Static Double CalcDistance3D(Double x1, Double y1, Double z1, Double x2, Double y2, Double z2)
+		{
+			var distance = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1) + (z2 - z1) * (z2 - z1));
+			Return distance;
+		}
+	}
+}
+  }
+    End Class
