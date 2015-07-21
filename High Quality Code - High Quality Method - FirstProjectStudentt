@@ -1,0 +1,86 @@
+Module Student
+
+    Using System;
+    Public Class FirstProjectStudent
+        Private String firstName;
+
+        Private String lastName;
+
+        Private String DateTime dateOfBirth;
+        Private String town = String.Empty;
+        Private String comment = String.Empty;
+        Public Student()
+        {
+
+        }
+
+         Public Student(firstName, String lastName)
+            {
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            }
+            Public Student(DateTime dateOfBirth, string otherInfo)
+            {
+            this.dateofBirth=dateofBirth
+            this.otherInfo=otherInfo
+            }
+
+        Public String FirstName
+        {
+            Get
+            {
+                Return this.firstName;
+            }
+
+            Set
+            {
+                If (value == null)
+                {
+                    Throw New ArgumentNullException(this.firstName, "First name is null!");
+                }
+
+                this.firstName = value;
+            }
+        }
+        
+        Public String LastName
+        {
+            Get
+            {
+                Return this.lastName; 
+            }
+
+            Set
+            {
+                If (value == null)
+                {
+                    Throw New ArgumentNullException(this.lastName, "Last name is null!");
+                }
+
+                this.lastName = value;
+            }
+        }
+        Public String dateofBirth
+            {
+            Get
+        {
+        Return this.dateofBirth
+        }
+        Set
+}
+        {
+                If (value == null)
+                {
+                    Throw New ArgumentNullException(this.dateofBirth, "dateofBirth is null!");
+                }
+
+                this.dateOfBirth = value;
+            }
+        }
+       Public String Town { Get; Set; }
+
+       Public String Comment { Get; Set; }
+
+    End Class
+
+End Module
