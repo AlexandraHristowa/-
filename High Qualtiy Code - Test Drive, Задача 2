@@ -1,0 +1,20 @@
+
+
+Namespace Poker
+{
+    Public Class Hand :  IHand
+    {
+        Public IList<ICard> Cards { Get; Private Set; }
+
+        Public Hand(IList < ICard > cards)
+        {
+            this.Cards = cards;
+        }
+
+        Public override String ToString()
+        {
+            Throw New NotImplementedException();
+        }
+    }
+}
+
