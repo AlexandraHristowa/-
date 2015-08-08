@@ -1,0 +1,35 @@
+Using System;
+
+Namespace CardGame
+
+End Namespace
+Private Rank rank;
+Private Suit suit;
+Enum Face { Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace }
+02
+Enum Suit { Clubs, Diamonds, Hearts, Spades }
+
+    Public Card(Rank theRank, Suit theSuit)
+        {
+        rank = theRank;
+        suit = theSuit;
+    }
+
+    Public Rank getRank() 
+        {
+        Return rank;
+    }
+
+    Public Suit getSuit() 
+        {
+        Return suit;
+    }
+
+    Public String toString()
+        {
+        Return (rank + " of " + suit);
+    }
+
+}
+
+    End Module
