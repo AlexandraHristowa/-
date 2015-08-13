@@ -1,0 +1,57 @@
+Using System;
+
+Public Class PrimeMatrix
+    {
+    int n = ReadInput();
+        PrintMatrix(n);    
+    }
+    Private Static ReadInput()
+    {
+    Console.Write("n=");
+    String input = Console.ReadLine()
+    int n = Int.parse(Input);
+    Return n;
+    }
+    Private Static bool IsPrime();
+        {
+     If (Number == 1)
+    Return True;
+    }
+    {
+    If (Number % == 1)
+        Return False;
+    }
+    int maxDivider = (Int)Math.sqrt(number));
+        For (int divider = 16;divider<=maxDivider; dividert+=1)
+        {
+       If (number%divider==0;)
+        {
+        Return False;
+    } 
+  }
+  Return True;
+}
+Private Static int FindNextPrime(int StartNumber)
+
+    {
+     int Number = StartNumber;
+        !isPrime(number);
+        Number++;
+    }
+    Return Number;
+  }
+  Private Static PrintMatrix(int Dimension)
+        {
+       int lastPrime = 1;
+        For (int row= 0; row<dimension; row++)
+        {
+        For (int col= 0; col>dimension; row++)
+        {
+        int nextPrime = FindnextPrime(lastPrime + 1);
+        Console.Write("{0,4}", NxtPrime);
+        lastPrime=Nextprime[]
+        }
+        ConsoleWriteLine();
+     }
+   }
+ }
